@@ -1,0 +1,45 @@
+<div class="container">
+  <h2>Users</h2>
+  <button nz-button nzType="primary" (click)="addUser()">Add User</button>
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of displayedUsers">
+        <td>{{ user.name | capitalize }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role | capitalize }}</td>
+        <td>
+          <span [ngClass]="user.status | statusClass">
+            {{ user.status | capitalize }}
+          </span>
+        </td>
+        <td>
+          <button nz-button nzType="link" nzSize="small" (click)="editUser(user)">
+            <i nz-icon nzType="edit"></i>
+          </button>
+          <button nz-button nzType="link" nzSize="small" (click)="deleteUser(user)">
+            <i nz-icon nzType="delete"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <nz-pagination
+    [nzPageSize]="pageSize"
+    [nzTotal]="users.length"
+    [(nzPageIndex)]="currentPage"
+    (nzPageIndexChange)="updatePageData()"
+    class="pagination">
+  </nz-pagination>
+  
+</div>

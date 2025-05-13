@@ -1,0 +1,60 @@
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 16px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  button[nzType="primary"] {
+    float: right;
+    margin-bottom: 16px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+  
+    th,
+    td {
+      padding: 10px 12px;
+      text-align: center;
+    }
+  
+    thead {
+      background-color: #fafafa;
+      font-weight: bold;
+    }
+  
+    tbody tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+  
+    td span.status-active {
+      background-color: #d4fcd2;
+      color: #007b00;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+  
+    td span.status-inactive {
+      background-color: #ffd1d1;
+      color: #c70000;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  
