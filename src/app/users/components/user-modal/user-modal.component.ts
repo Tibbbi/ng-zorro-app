@@ -8,6 +8,7 @@ import { User } from '../../models/user.interface';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { Inject } from '@angular/core';
+import { roleValidator } from '../../validators/role.validator'; 
 
 
 @Component({
@@ -34,12 +35,12 @@ export class UserModalComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const user = this.data?.user; 
+    const user = this.data?.user;
   
     this.form = this.fb.group({
       name: [user?.name || '', Validators.required],
       email: [user?.email || '', [Validators.required, Validators.email]],
-      role: [user?.role || '', Validators.required],
+      role: [user?.role || '', [Validators.required, roleValidator]],  // ✅ aici e folosit
       status: [user?.status || '', Validators.required]
     });
   }

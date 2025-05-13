@@ -1,27 +1,26 @@
 <form [formGroup]="form">
-    <div>
-      <label>Name</label>
-      <input nz-input formControlName="name" placeholder="Enter name" />
-    </div>
-  
-    <div>
-      <label>Email</label>
-      <input nz-input formControlName="email" placeholder="Enter email" />
-    </div>
-  
-    <div>
-      <label>Role</label>
-      <input nz-input formControlName="role" placeholder="Enter role" />
-    </div>
-  
-    <div>
-      <label>Status</label>
-      <input nz-input formControlName="status" placeholder="Enter status" />
-    </div>
-  
-    <div class="modal-actions">
-        <button nz-button (click)="cancel()">Cancel</button>
-        <button nz-button (click)="onSubmit()" [disabled]="form.invalid">OK</button>        
-    </div>
-  </form>
-  
+  <div>
+    <label>Name</label>
+    <input nz-input formControlName="name" placeholder="Enter name" />
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input nz-input formControlName="email" placeholder="Enter email" />
+  </div>
+
+  <div>
+    <label>Role</label>
+    <input nz-input formControlName="role" placeholder="Enter role" />
+  </div>
+
+  <div>
+    <label>Status</label>
+    <input nz-input formControlName="status" placeholder="Enter status" />
+  </div>
+
+  <div class="modal-actions">
+      <button nz-button (click)="cancel()">Cancel</button>
+      <button nz-button (click)="onSubmit()" [disabled]="form.invalid">OK</button>        
+  </div>
+</form>
